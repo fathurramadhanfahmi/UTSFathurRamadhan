@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#f8fcfa" /> 
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <button class="add-button">Install App</button>
+    <h1 align="center"> Desain Web</h1>
+    <p align="center">Program Studi Informatika</p>
+    <p align="center">Universitas Andalas</p>
+    <img src="Logo Unand PTNBH.png" class="center" style="width: 20%; height: 21%;" alt="Logo Unand"/>
+    <p align="center"> Dosen Pengampu : Luthfil Khairi, S.Kom., M.Cs.</p>
+    
+</body>
+<!-- Service Worker Registration -->
+<script>
+  if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js')
+              .then(function(registration) {
+                  console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              }, function(error) {
+                  console.log('ServiceWorker registration failed: ', error);
+              });
+      });
+  }
+</script>
+
+<!-- Add to Home Screen Feature -->
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+      let deferredPrompt;
+      const addBtn = document.querySelector('.add-button');
+      if (addBtn) {
+          addBtn.style.display = 'none'; 
+      }
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+          e.preventDefault();
+          deferredPrompt = e;
+          if (addBtn) {
+              addBtn.style.display = 'block'; 
+          }
+
+          addBtn.addEventListener('click', () => {
+              addBtn.style.display = 'none';
+              deferredPrompt.prompt();
+              deferredPrompt.userChoice.then((choiceResult) => {
+                  if (choiceResult.outcome === 'accepted') {
+                      console.log('User accepted the A2HS prompt');
+                  } else {
+                      console.log('User dismissed the A2HS prompt');
+                  }
+                  deferredPrompt = null;
+              });
+          });
+      });
+  });
+</script>
+
+</html>

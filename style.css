@@ -1,0 +1,142 @@
+
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    text-align: center;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+div ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+div a {
+    color: #fff;
+    text-decoration: none;
+}
+
+div a:hover {
+    color: #ccc;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+
+#sosialmedia {
+    background-color: transparent;
+}
+
+#contactform {
+background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 30%;
+    height: 27px;
+    padding: 5px;
+    margin: 4px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+
+    #contactForm {
+        padding: 15px 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
