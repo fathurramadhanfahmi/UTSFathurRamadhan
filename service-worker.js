@@ -1,14 +1,14 @@
 const CACHE_NAME = 'web-fathur-v1';
 const urlsToCache = [
     '/',
-    '/index.html',
-    '/about.html',
-    '/contact.html',
-    '/style.css',
-    '/1.png',
-    '/foto saya.png',
-    '/Logo Unand PTNBH.png',
-    '/offline.html' // Pastikan ini ada
+    '/UTSFathurRamadhan/index.html',
+    '/UTSFathurRamadhan/about.html',
+    '/UTSFathurRamadhan/contact.html',
+    '/UTSFathurRamadhan/style.css',
+    '/UTSFathurRamadhan/1.png',
+    '/UTSFathurRamadhan/foto saya.png',
+    '/UTSFathurRamadhan/Logo Unand PTNBH.png',
+    '/UTSFathurRamadhan/offline.html' // Pastikan ini ada
 ];
 
 // Install Service Worker
@@ -37,7 +37,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
         fetch(event.request).catch(() => {
             // Jika fetch gagal, kembalikan offline.html
-            return caches.match('/offline.html');
+            return caches.match('/UTSFathurRamadhan/offline.html');
         })
     );
 });
